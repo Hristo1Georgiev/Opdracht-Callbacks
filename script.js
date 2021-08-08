@@ -1,9 +1,10 @@
 
 // Opdracht: Callbacks.
 function huiswerkMaken(vak, callback) {
-    setTimeout(() =>{
-    console.log(`${"Ok, ok, ik ga mijn " + `${vak}` + " huiswerk maken."}`);
-}, 3000);
+    setTimeout(() => {
+        console.log(`${"Ok, ok, ik ga mijn " + `${vak}` + " huiswerk maken."}`);
+        callback && callback();
+    }, 3000);
 };
 
 function klaarMetHuiswerk() {
